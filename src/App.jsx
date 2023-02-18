@@ -1,11 +1,12 @@
 import React from 'react'
-import './App.css'
+import './App.scss'
+import Header from './assets/components/Header'
 
 function App() {
 
   return (
     <div className="App">
-      <h1>Travel Journal</h1>
+      <Header />
     </div>
   )
 }
