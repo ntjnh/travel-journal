@@ -8,3 +8,22 @@ $white: #fff;
 body {
     color: $black;
 }
+
+// Header
+.Header {
+    align-items: center;
+    background-color: $red;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    line-height: 17.5px;
+    padding: 1.25rem;
+    text-align: center;
+
+    h1 {
+        font-size: 14.46px;
+        font-weight: 500;
+        margin: 0 0 0 .5rem;
+        text-transform: lowercase;
+    }
+}
