@@ -1,11 +1,20 @@
-export default function Card() {
-    return (
-        <article>
-            <img src="https://source.unsplash.com/WLxQvbMyfas" alt="" />
+import pin from "../pin.svg"
 
-            <h2>Mount Fuji</h2>
-        
-            <p>Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.</p>
+export default function Card(props) {
+    return (
+        <article className="place">
+            <div className="place__image">
+                <img src={props.img} alt={props.destination} />
+            </div>
+
+            <div className="place__info">
+                <img className="place__pin" src={pin} />
+                <span className="place__country">{props.country}</span>
+                <a className="place__map-link" href={props.mapLink} target="_blank">View on Google Maps</a>
+                <h2 className="place__name">{props.destination}</h2>
+                <p className="place__dates">{props.dates}</p>
+                <p className="place__desc">{props.description}</p>
+            </div>
         </article>
     )
 }
