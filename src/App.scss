@@ -29,5 +29,96 @@ body {
 }
 
 .main {
-    padding: 45px 40px 28px;
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 32px 24px;
+    width: 100%;
+
+    @media (min-width: 550px) {
+        padding: 45px 40px 28px;
+    }
+
+    .place {
+        @media (min-width: 550px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 168px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 36px;
+        }
+
+        &__info {
+            width: 100%;
+
+            @media (min-width: 550px) {
+                max-width: 326px;
+            }
+        }
+
+        &__image {
+            margin-bottom: 16px;
+            width: 100%;
+            
+            @media (min-width: 550px) {
+                align-items: center;
+                border-radius: 5px;
+                display: flex;
+                height: 168px;
+                justify-content: center;
+                max-width: 125px;
+                overflow: hidden;
+            }
+            
+            img {
+                border-radius: 5px;
+                display: inline-block;
+                max-width: 100%;
+                
+                @media (min-width: 550px) {
+                    height: 100%;
+                }
+            }
+        }
+
+        &__country,
+        &__map-link,
+        &__dates {
+            font-size: 10.24px;
+            line-height: 12.39px;
+        }
+
+        &__pin {
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        &__country {
+            display: inline-block;
+            letter-spacing: 0.17em;
+            margin-right: 12px;
+            text-transform: uppercase;
+        }
+
+        &__map-link {
+            color: $grey;
+        }
+
+        &__name {
+            font-size: 25px;
+            line-height: 30.26px;
+            margin: 4px 0 0;
+        }
+        
+        &__dates {
+            font-weight: 700;
+        }
+
+        &__desc {
+            font-size: 10.24px;
+            line-height: 15.36px;
+        }
+    }
 }
